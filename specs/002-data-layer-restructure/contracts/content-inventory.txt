@@ -1,0 +1,80 @@
+#about
+#contact
+#experience
+#projects
+#skills
+A fast, secure, and scalable serverless image processing application built on AWS. Users upload images via web interface, and the system automatically resizes them using Lambda triggers, S3, and API Gateway.
+API Gateway
+AWS
+AWS & Azure
+AWS Lambda
+About
+Added infrastructure and application monitoring using Prometheus and Grafana.
+Ansible
+ArgoCD
+Automated cloud infrastructure with Docker, Kubernetes, AWS, Terraform, and Ansible.
+Azure
+Built CI/CD pipelines with GitHub Actions, automated deployments, and Bash scripts for environment provisioning.
+Built and secured CI/CD pipelines using Jenkins, integrating vulnerability scanning tools.
+CI/CD (Jenkins, GitHub Actions)
+Contact
+Deployed a Node.js App with MongoDB using Docker, Ansible, and Kubernetes. Migrated to a GitOps workflow using ArgoCD for continuous deployment and drift detection.
+Designed a secure end-to-end CI/CD pipeline for a microservices app (Node.js, Go, Python). Integrated Terraform for IaC, Docker, and security tools like Checkov, Trivy, and Snyk. Automated notifications via AWS SES and Slack.
+Designed and implemented a secure, automated backup and restore tool with encryption and remote storage support using Bash scripting.
+Designed production-ready Azure infrastructure using Pulumi (Python). Provisions secure environment with VNets, segmented subnets, NSGs, Linux VMs, and Azure App Service with private integration.
+DevOps Engineer
+DevSecOps Intern
+DevSecOps Trainee
+Developed infrastructure using Pulumi (Python) and integrated New Relic dashboards to monitor Azure App Service metrics and Java WAR APM.
+Docker
+Docker & Kubernetes
+Email
+Experience
+Expert
+Feb 2025 – May 2025
+Gained hands-on experience with Linux, Bash, Git, Python, and secure coding practices.
+Git & Version Control
+GitHub
+GitHub Actions
+GitOps
+Hassan El Bahnasy
+I am a DevOps Engineer trained through NTI's elite DevSecOps program, specialized in delivering fast, secure, and scalable solutions. My background involves designing CI/CD pipelines, automating cloud infrastructure (AWS & Azure), and hardening systems. I am passionate about driving innovation, closing the gap between development and security, and building resilient high-impact systems.
+I help businesses automate, secure, and scale their cloud systems.
+IT Visionary
+IaC
+Implemented secure CI/CD pipelines using GitHub Actions, Terraform, Docker, and security tools (Checkov, Trivy, SonarQube, Snyk).
+Intermediate
+Jul 2025 – Aug 2025
+Kubernetes
+LinkedIn
+Linux Administration
+National Telecommunications Institute (NTI)
+Networking
+Node.js
+Projects
+Prometheus & Grafana
+Pulumi
+Pulumi Azure Infrastructure – NDC Core
+Python
+Python & Bash
+Results-driven DevOps Engineer with a security-first mindset.
+S3
+Secure Cloud-Native Microservices CI/CD
+Security
+Security Tools (SonarQube, Trivy)
+Sep 2025 – Present
+Serverless
+Serverless Image Editor
+Sheen Information Technology
+Skills
+Terraform
+Terraform & Ansible
+To-Do List GitOps Pipeline
+hassanelbahnasy85@gmail.com
+https://github.com/Bahnasy2001
+https://github.com/Bahnasy2001/Pulumi-Azure-Infrastructure-NDC-Core
+https://github.com/Bahnasy2001/Secure-Cloud-Native-Microservices-CICD-Platform
+https://github.com/Bahnasy2001/Serverless-Image-Editor
+https://github.com/Bahnasy2001/Todo-List-CICD-Project
+https://www.linkedin.com/in/hassanbahnasy/
+mailto:hassanelbahnasy85@gmail.com
