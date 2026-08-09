@@ -9,7 +9,7 @@ import { Config } from '../types';
  */
 type SiteIdentity = Pick<
   Config,
-  'name' | 'title' | 'tagline' | 'email' | 'about' | 'socials' | 'navItems'
+  'name' | 'title' | 'tagline' | 'email' | 'resumeUrl' | 'about' | 'socials' | 'navItems'
 >;
 
 export const site: SiteIdentity = {
@@ -17,6 +17,9 @@ export const site: SiteIdentity = {
   title: "DevOps Engineer",
   tagline: "I help businesses automate, secure, and scale their cloud systems.",
   email: "hassanelbahnasy85@gmail.com",
+
+  // The one place the CV address lives. Both navbar Resume links read it from here.
+  resumeUrl: "https://drive.google.com/file/d/1rxHTO_0Vl6wu2eGRiKLt6aJM79-GEDYV/view",
 
   about: {
     intro: "I run production cloud infrastructure — and make it cheaper, faster, and safer to ship.",
@@ -47,6 +50,7 @@ export const site: SiteIdentity = {
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
+    { name: "Certifications", href: "#certifications" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ],
