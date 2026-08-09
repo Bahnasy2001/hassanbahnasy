@@ -40,6 +40,10 @@ export interface Project {
   image?: string;
   readmeUrl?: string;
 
+  // Several named repositories for one entry, listed in the case-study dialog.
+  // Independent of repoUrl: an entry may have either, both, or neither.
+  links?: { label: string; url: string }[];
+
   // --- Presentation flags (optional) ---
   featured?: boolean;
   labCount?: number;                 // Only meaningful for a lab collection entry.
