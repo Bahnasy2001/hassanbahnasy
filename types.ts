@@ -8,7 +8,6 @@ export interface NavItem {
 export interface Skill {
   name: string;
   icon: LucideIcon;
-  level: "Expert" | "Intermediate" | "Learning";
 }
 
 export interface Experience {
@@ -21,7 +20,7 @@ export interface Experience {
 export interface Project {
   // --- Identity ---
   slug: string;                      // Stable, URL-safe identifier. Set once; never derived at runtime.
-  kind: 'project' | 'lab';           // Substantial project vs. smaller hands-on lab.
+  kind: 'project' | 'lab';           // Substantial project vs. hands-on lab collection.
 
   // --- Display ---
   title: string;
@@ -43,7 +42,7 @@ export interface Project {
 
   // --- Presentation flags (optional) ---
   featured?: boolean;
-  labCount?: number;                 // Only meaningful for a collection entry.
+  labCount?: number;                 // Only meaningful for a lab collection entry.
 }
 
 export interface Certification {
@@ -52,7 +51,7 @@ export interface Certification {
   year: string;                      // String for consistency with Project.year.
   status: 'completed' | 'in-progress';
   tier: 'expert' | 'associate' | 'foundational';
-  credlyUrl?: string;                // Optional: an in-progress credential has no badge yet.
+  credentialUrl?: string;            // Microsoft Learn or Credly. Absent for in-progress credentials.
 }
 
 export interface SocialLink {
