@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 import { config } from '../data/config';
 import { Folder, ExternalLink, Github } from 'lucide-react';
 import type { Project } from '../types';
+import CaseStudyDialog from './CaseStudyDialog';
+
+/** A case study is offered only when all three narrative fields are present. */
+const hasCaseStudy = (p: Project): boolean =>
+  Boolean(p.problem && p.approach && p.impact);
 
 /**
  * Two display tiers for the same card.
@@ -33,11 +38,12 @@ const TIERS = {
 
 type Tier = keyof typeof TIERS;
 
-const ProjectCard: React.FC<{ project: Project; index: number; tier: Tier }> = ({
-  project,
-  index,
-  tier,
-}) => {
+const ProjectCard: React.FC<{
+  project: Project;
+  index: number;
+  tier: Tier;
+  onOpenCaseStudy: (project: Project) => void;
+}> = ({ project, index, tier, onOpenCaseStudy }) => {
   const styles = TIERS[tier];
 
   return (
@@ -106,6 +112,19 @@ const ProjectCard: React.FC<{ project: Project; index: number; tier: Tier }> = (
           </span>
         ))}
       </div>
+
+      {/* Only offered when problem, approach, and impact are all present. The type
+          cannot express that rule — all three are optional — so this guard is the
+          only thing enforcing it. */}
+      {hasCaseStudy(project) && (
+        <button
+          type="button"
+          onClick={() => onOpenCaseStudy(project)}
+          className="text-accent font-mono text-xs hover:text-accentHover transition-colors mt-4"
+        >
+          Read case study
+        </button>
+      )}
     </motion.div>
   );
 };
@@ -114,11 +133,12 @@ const ProjectCard: React.FC<{ project: Project; index: number; tier: Tier }> = (
  * A labelled group of cards. Renders nothing at all when the group is empty, so an
  * orphaned sub-heading can never sit above empty space.
  */
-const ProjectGroup: React.FC<{ heading: string; items: Project[]; tier: Tier }> = ({
-  heading,
-  items,
-  tier,
-}) => {
+const ProjectGroup: React.FC<{
+  heading: string;
+  items: Project[];
+  tier: Tier;
+  onOpenCaseStudy: (project: Project) => void;
+}> = ({ heading, items, tier, onOpenCaseStudy }) => {
   if (items.length === 0) return null;
 
   return (
@@ -126,7 +146,13 @@ const ProjectGroup: React.FC<{ heading: string; items: Project[]; tier: Tier }> 
       <h4 className="text-2xl font-bold text-white font-display mb-8">{heading}</h4>
       <div className={TIERS[tier].grid}>
         {items.map((project, index) => (
-          <ProjectCard key={project.slug} project={project} index={index} tier={tier} />
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            index={index}
+            tier={tier}
+            onOpenCaseStudy={onOpenCaseStudy}
+          />
         ))}
       </div>
     </div>
@@ -137,6 +163,9 @@ const Projects: React.FC = () => {
   // Derived, not mutated — content order is preserved within each group.
   const featured = config.projects.filter((p) => p.kind === 'project');
   const labs = config.projects.filter((p) => p.kind === 'lab');
+
+  // The open item doubles as open state: null means closed, so at most one is ever open.
+  const [caseStudy, setCaseStudy] = React.useState<Project | null>(null);
 
   return (
     <section id="projects" className="py-24 bg-primary">
@@ -156,10 +185,22 @@ const Projects: React.FC = () => {
         </motion.div>
 
         <div className="space-y-12">
-          <ProjectGroup heading="Featured Projects" items={featured} tier="primary" />
-          <ProjectGroup heading="Labs & Practice" items={labs} tier="secondary" />
+          <ProjectGroup
+            heading="Featured Projects"
+            items={featured}
+            tier="primary"
+            onOpenCaseStudy={setCaseStudy}
+          />
+          <ProjectGroup
+            heading="Labs & Practice"
+            items={labs}
+            tier="secondary"
+            onOpenCaseStudy={setCaseStudy}
+          />
         </div>
       </div>
+
+      <CaseStudyDialog project={caseStudy} onClose={() => setCaseStudy(null)} />
     </section>
   );
 };

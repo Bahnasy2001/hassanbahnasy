@@ -162,6 +162,14 @@ export const projects: Project[] = [
     summary: "Four standalone exercises from earlier in the journey, covering Jenkins, Terraform, Ansible, and LAMP.",
     description: "Four standalone exercises from earlier in the journey: a backend registration system deployed with Terraform, Ansible, Jenkins, and Docker Compose; a Jenkins pipeline where Ansible configures EC2 instances discovered dynamically from Terraform tags; a Jenkins-to-Minikube deployment pipeline; and a LAMP stack built and deployed on cloud infrastructure.",
     tags: ["Jenkins", "Terraform", "Ansible", "Minikube", "LAMP"],
-    repoUrl: "https://github.com/Bahnasy2001"
+    problem: "Individual exercises get abandoned half-finished when there's no pressure to complete them, and scattered across repositories they're impossible to point anyone at.",
+    approach: "Four standalone exercises, each taken to a working end state: a backend registration system deployed with Terraform, Ansible, Jenkins, and Docker Compose; a Jenkins pipeline where Ansible configures EC2 instances discovered dynamically from Terraform tags; a Jenkins-to-Minikube deployment pipeline; and a LAMP stack built and deployed on cloud infrastructure.",
+    impact: "Four separate delivery approaches, each finished and documented in its own repository.",
+    links: [
+      { label: "SemiColon Registration Pipeline", url: "https://github.com/Bahnasy2001/semi-colon-pipeline" },
+      { label: "Jenkins + Terraform + Ansible EC2", url: "https://github.com/Bahnasy2001/jenkins-terraform-ansible-ec2-pipeline" },
+      { label: "Minikube CI/CD Pipeline", url: "https://github.com/Bahnasy2001/CICD_SimpleApp" },
+      { label: "LAMP Stack Deployment", url: "https://github.com/Bahnasy2001/LAMP_Task" }
+    ]
   }
 ];
