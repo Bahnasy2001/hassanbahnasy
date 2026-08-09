@@ -69,6 +69,8 @@ export interface Config {
   title: string;
   tagline: string;
   email: string;
+  resumeUrl: string;                 // Required on purpose: a missing CV address is a build
+                                     // failure, not another silently dead button.
   about: {
     intro: string;
     bio: string;

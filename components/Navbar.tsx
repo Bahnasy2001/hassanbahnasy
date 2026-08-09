@@ -43,7 +43,9 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a 
-            href="/resume.pdf" 
+            href={config.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
             className="px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent text-accent rounded-lg transition-all duration-300 text-sm font-medium"
           >
             Resume
@@ -79,7 +81,9 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
                <a 
-                  href="/resume.pdf" 
+                  href={config.resumeUrl}
+                  target="_blank"
+                  rel="noreferrer"
                   className="mt-6 text-center py-3 bg-accent/10 border border-accent/20 text-accent rounded-lg font-medium"
                 >
                   Resume

@@ -33,7 +33,7 @@ export const certifications: Certification[] = [
   {
     name: "Certified Kubernetes Administrator (CKA)",
     issuer: "Linux Foundation",
-    year: "In progress",
+    year: "",
     status: "in-progress",
     tier: "associate"
   },
