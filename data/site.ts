@@ -19,8 +19,8 @@ export const site: SiteIdentity = {
   email: "hassanelbahnasy85@gmail.com",
 
   about: {
-    intro: "Results-driven DevOps Engineer with a security-first mindset.",
-    bio: "I am a DevOps Engineer trained through NTI's elite DevSecOps program, specialized in delivering fast, secure, and scalable solutions. My background involves designing CI/CD pipelines, automating cloud infrastructure (AWS & Azure), and hardening systems. I am passionate about driving innovation, closing the gap between development and security, and building resilient high-impact systems."
+    intro: "I run production cloud infrastructure — and make it cheaper, faster, and safer to ship.",
+    bio: "I'm a DevOps Engineer who owns the Azure infrastructure and delivery pipelines behind 11 production applications. My work is measured in outcomes: 35% off the monthly cloud bill with zero downtime, a daily release cadence across .NET, Node.js, and Java services, and an observability stack built from nothing that now handles 40 GB of logs a day.\n\nI came into this through Ain Shams University's Computer and Systems Engineering program and intensive DevOps training with NTI, DEPI, and Red Hat, and I've since gone deep on Azure — certified through AZ-305 Solutions Architect Expert, with AZ-400 and CKA in progress — and work on AWS as an AWS Certified Solutions Architect. I work across Terraform, Pulumi, Kubernetes, and GitHub Actions, and I care most about the boring things that decide whether a system survives: cost, visibility, and safe deployment."
   },
 
   // Order is render order — Contact renders these left to right.
