@@ -26,9 +26,10 @@ export const certifications: Certification[] = [
   {
     name: "Azure DevOps Engineer Expert (AZ-400)",
     issuer: "Microsoft",
-    year: "Expected 2026",
-    status: "in-progress",
-    tier: "expert"
+    year: "2026",
+    status: "completed",
+    tier: "expert",
+    credentialUrl: "https://learn.microsoft.com/api/credentials/share/en-us/hassanElbahnasy-2682/EA120EFA83068F60?sharingId=8BBCCFDDBE078E45"
   },
   {
     name: "Certified Kubernetes Administrator (CKA)",
